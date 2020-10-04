@@ -1,7 +1,7 @@
 .grid {
     width: 400px;
     height: 600px;
-    background-color: yellow;
+    background-color: yellow;    
     position: relative;
     font-size: 200px;
     text-align: center
@@ -11,6 +11,8 @@
     width: 60px;
     height: 85px;
     background-color: red;
+    /* need to find player sprite. make sure to resize it to match w&h of doodler
+    /* background-image: url("/images/sd-gundam-chibi.jpg"); */
     position: absolute;
 }
 

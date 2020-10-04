@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (doodlerBottomSpace > startPoint + 200) {
                 fall()
             }
-        },30)
+        },50)
     }
 
     function fall() {
@@ -102,14 +102,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log('landed')
                     startPoint = doodlerBottomSpace
                     jump()
+                    isJumping = true
                 }
             })
         })
     }
 
-    
-
-    
+  
 
     function moveLeft() {
         if (isGoingRight) {
@@ -131,10 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
         isGoingRight = true
         rightTimerId = setInterval(function () {
             if (doodlerLeftSpace <= 340) {
-                doodlerLeftSpace += 3
+                doodlerLeftSpace += 5
                 doodler.style.left = doodlerLeftSpace + 'px'
             } else moveLeft()
-        })
+        },20)
     }
 
     function moveStraight() {
